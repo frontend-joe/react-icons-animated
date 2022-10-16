@@ -1,0 +1,19 @@
+.burger.burger-swipe,
+.burger.burger-swipe::before,
+.burger.burger-swipe::after {
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.burger.burger-swipe.is-closed {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.burger.burger-swipe.is-closed::before {
+  transform: rotate(-45deg) translate(30px, 40px);
+}
+
+.burger.burger-swipe.is-closed::after {
+  transform: rotate(45deg) translate(30px, -42px);
+}

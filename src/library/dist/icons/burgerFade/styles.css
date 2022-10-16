@@ -1,0 +1,27 @@
+.burger-fade-wrap {
+  position: relative;  
+}
+
+.burger.burger-fade-top::before {
+  opacity: 0;
+  transform: rotate(-45deg) translate(-4px, 6px);
+  top: -8px;
+}
+.burger.burger-fade-top {
+  height: 0;
+}
+.burger.burger-fade-top::after {
+  opacity: 0;
+  transform: rotate(45deg) translate(-4px, -8px);
+  top: 8px;
+}
+.burger.burger-fade-top.is-closed::before,
+.burger.burger-fade-top.is-closed::after {
+  opacity: 1;
+}
+.burger.burger-fade {
+  opacity: 1;
+}
+.burger.burger-fade.is-closed {
+  opacity: 0;
+}

@@ -1,0 +1,18 @@
+.burger.burger-spin::before,
+.burger.burger-spin::after {
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+}
+
+.burger.burger-spin.is-closed {
+  transform: rotate(360deg);
+  background: transparent;
+}
+
+.burger.burger-spin.is-closed::before {
+  transform: rotate(-45deg) translate(-6px, 4px);
+}
+
+.burger.burger-spin.is-closed::after {
+  transform: rotate(45deg) translate(-6px, -6px);
+}

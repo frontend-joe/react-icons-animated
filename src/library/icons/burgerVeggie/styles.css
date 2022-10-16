@@ -1,0 +1,26 @@
+.burger.burger-veggie {
+  transition: none;
+  height: 0;
+}
+
+.burger.burger-veggie::before,
+.burger.burger-veggie::after {
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+}
+
+.burger.burger-veggie::before {
+  top: -4px;
+}
+
+.burger.burger-veggie::after {
+  top: 4px;
+}
+
+.burger.burger-veggie.is-closed::before {
+  transform: rotate(-45deg) translate(-2px, 2px);
+}
+
+.burger.burger-veggie.is-closed::after {
+  transform: rotate(45deg) translate(-2px, -4px);
+}

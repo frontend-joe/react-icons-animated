@@ -1,0 +1,167 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+}
+
+.wrapper.is-docs-open .docs-close-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wrapper.is-docs-open .docs {
+  width: 500px;
+  max-width: 500px;
+}
+
+.burgers {
+  flex: 4 4 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+  min-width: 100px;
+}
+
+.cell:nth-child(odd) {
+  background: #30323c;
+}
+
+.cell-title {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  /* background: red; */
+  cursor: pointer;
+}
+
+.docs {
+  flex: 1 1 auto;
+  width: 0;
+  max-width: 0;
+  overflow: hidden;
+  background: #111214;
+  transition: all 0.4s;
+}
+
+.docs-close-button {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 28px;
+  right: 32px;
+  color: #f9f9f9;
+  font-family: inherit;
+}
+
+.docs h2 {
+  padding: 32px 24px;
+  color: #f9f9f9;
+}
+
+.docs p {
+  margin: 10px 24px 16px;
+  color: #f9f9f9;
+}
+
+.code-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 150px;
+  padding: 30px 0;
+  border-radius: 10px;
+  background: #111214;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-family: inherit;
+}
+
+@media only screen and (max-width: 600px) {
+  .code-button {
+    display: none;
+  }
+}
+
+.code-button-text {
+  color: #f9f9f9;
+}
+
+.code-icon {
+  flex: 0 0 16px;
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.code-icon > span {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 8px;
+  rotate: 45deg;
+  top: 3px;
+  background: #f9f9f9;
+}
+
+.code-icon > span,
+.code-icon > span::after {
+  border-radius: 1px;
+}
+
+.code-icon > span::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background: inherit;
+}
+
+.code-icon > span:first-child {
+  right: 5px;
+  left: auto;
+  rotate: -45deg;
+  transform: translate(2px, 2px);
+}
+
+.code-icon > span:first-child::after {
+  left: -3px;
+  rotate: -90deg;
+}
+
+.code-icon > span:last-child {
+  rotate: 45deg;
+  right: auto;
+  left: 5px;
+  transform: translate(-2px, 2px);
+}
+
+.code-icon > span:last-child::after {
+  right: -3px;
+  rotate: 90deg;
+}

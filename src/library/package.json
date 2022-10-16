@@ -1,0 +1,41 @@
+{
+  "name": "react-icons-animated",
+  "version": "1.0.0",
+  "description": "Library for adding animated icons to React apps",
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/icons",
+    "README.md"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:npm": "rm -Rf dist && mkdir dist && babel  --extensions .ts index.ts -d dist --copy-files && babel index.d.ts -d dist --copy-files && babel --extensions .ts,.tsx ./icons -d dist/icons --copy-files"
+  },
+  "author": "@frontendjoe",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      [
+        "@babel/react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      [
+        "@babel/preset-typescript"
+      ],
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6"
+  }
+}

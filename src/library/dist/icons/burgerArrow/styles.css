@@ -1,0 +1,18 @@
+.burger.burger-arrow::before,
+.burger.burger-arrow::after {
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+}
+
+.burger.burger-arrow.is-closed::before,
+.burger.burger-arrow.is-closed::after {
+  width: 20px;
+}
+
+.burger.burger-arrow.is-closed::before {
+  transform: rotate(-45deg) translate(-4px, -2px);
+}
+
+.burger.burger-arrow.is-closed::after {
+  transform: rotate(45deg) translate(-4px, 2px);
+}

@@ -1,0 +1,30 @@
+.burger {
+  position: relative;
+  width: 30px;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  display: block;
+  border-radius: 2px;
+  height: 2px;
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.burger::before {
+  top: -8px;
+}
+
+.burger::after {
+  top: 8px;
+}

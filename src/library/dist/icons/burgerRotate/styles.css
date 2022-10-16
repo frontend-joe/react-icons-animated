@@ -1,0 +1,3 @@
+.burger.burger-rotate.is-closed {
+  transform: rotate(90deg);
+}

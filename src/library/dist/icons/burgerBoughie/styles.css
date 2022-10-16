@@ -1,0 +1,21 @@
+.burger.burger-boughie {
+  transition: none;
+}
+
+.burger.burger-boughie::before,
+.burger.burger-boughie::after {
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+}
+
+.burger.burger-boughie.is-closed {
+  height: 0;
+}
+
+.burger.burger-boughie.is-closed::before {
+  transform: rotate(-405deg) translate(-6px, 4px);
+}
+
+.burger.burger-boughie.is-closed::after {
+  transform: rotate(405deg) translate(-6px, -6px);
+}

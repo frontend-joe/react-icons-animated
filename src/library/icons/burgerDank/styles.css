@@ -1,0 +1,34 @@
+.burger.burger-dank,
+.burger.burger-dank::before,
+.burger.burger-dank::after {
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.burger.burger-dank::before,
+.burger.burger-dank::after {
+  width: 15px;
+}
+
+.burger.burger-dank::before {
+  left: 0;
+  transform-origin: 100% 0%;
+}
+
+.burger.burger-dank::after {
+  left: 15px;
+  transform-origin: 0% 100%;
+}
+
+.burger.burger-dank.is-closed {
+  transform: rotate(-45deg);
+}
+
+.burger.burger-dank.is-closed::before {
+  transform: rotate(90deg) translate(10px, -2px);
+}
+
+.burger.burger-dank.is-closed::after {
+  transform: rotate(90deg) translate(-9px, 0px);
+  width: 16px;
+}
