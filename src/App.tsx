@@ -8,6 +8,7 @@ import {
   BurgerBoughie,
   BurgerSpin,
   BurgerFade,
+  ChevronClose,
 } from "./library";
 import "./App.css";
 import { useEffect, useState } from "react";
@@ -15,23 +16,21 @@ import { useEffect, useState } from "react";
 import { Docs } from "./components/Docs";
 import { CodeButton } from "./components/CodeButton";
 
-const burgers: BurgerComponent[] = [
-  { name: "Rotate", Burger: BurgerRotate },
-  { name: "Arrow", Burger: BurgerArrow },
-  { name: "Close", Burger: BurgerClose },
-  { name: "Swipe", Burger: BurgerSwipe },
-  { name: "Veggie", Burger: BurgerVeggie },
-  { name: "Dank", Burger: BurgerDank },
-  { name: "Boughie", Burger: BurgerBoughie },
-  { name: "Spin", Burger: BurgerSpin },
-  { name: "Fade", Burger: BurgerFade },
+const burgers: IconComponent[] = [
+  { name: "Rotate", Icon: BurgerRotate },
+  { name: "Arrow", Icon: BurgerArrow },
+  { name: "Close", Icon: BurgerClose },
+  { name: "Swipe", Icon: BurgerSwipe },
+  { name: "Veggie", Icon: BurgerVeggie },
+  { name: "Dank", Icon: BurgerDank },
+  { name: "Boughie", Icon: BurgerBoughie },
+  { name: "Spin", Icon: BurgerSpin },
+  { name: "ChevronClose", Icon: ChevronClose },
 ];
 
 function App() {
   const [isClosedList, setIsClosedList] = useState<boolean[]>([]);
-  const [activeBurger, setActiveBurger] = useState<
-    BurgerComponent | undefined
-  >();
+  const [activeBurger, setActiveBurger] = useState<IconComponent | undefined>();
 
   const handleBurgerClicked = (index: number) => {
     const isClosedListCopy = [...isClosedList];
@@ -40,10 +39,7 @@ function App() {
   };
 
   const handleCodeButtonClicked = (name: string) => {
-    console.log("name", name);
-
     const foundBurger = burgers.find((b) => b.name === name);
-
     setActiveBurger(foundBurger);
   };
 
@@ -54,12 +50,12 @@ function App() {
   return (
     <main className={`wrapper ${activeBurger && "is-docs-open"}`}>
       <div className="burgers">
-        {burgers.map(({ name, Burger }, index) => (
+        {burgers.map(({ name, Icon }, index) => (
           <div className="cell" key={name}>
             <CodeButton onClick={handleCodeButtonClicked}>{name}</CodeButton>
             <h2 className="cell-title">{name}</h2>
             <button onClick={() => handleBurgerClicked(index)}>
-              <Burger isClosed={isClosedList[index]} />
+              <Icon isClosed={isClosedList[index]} />
             </button>
           </div>
         ))}

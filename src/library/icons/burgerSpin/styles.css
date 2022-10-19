@@ -10,9 +10,9 @@
 }
 
 .burger.burger-spin.is-closed::before {
-  transform: rotate(-45deg) translate(-6px, 4px);
+  transform: rotate(-45deg) translate(-6px, 5px);
 }
 
 .burger.burger-spin.is-closed::after {
-  transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-5px, -6px);
 }

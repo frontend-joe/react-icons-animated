@@ -7,3 +7,4 @@ export { BurgerDank } from "./icons/burgerDank/BurgerDank";
 export { BurgerBoughie } from "./icons/burgerBoughie/BurgerBoughie";
 export { BurgerSpin } from "./icons/burgerSpin/BurgerSpin";
 export { BurgerFade } from "./icons/burgerFade/BurgerFade";
+export { ChevronClose } from "./icons/chevronClose/ChevronClose";

@@ -4,8 +4,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 type Props = {
-  setActiveBurger: (args0: BurgerComponent | undefined) => void;
-  activeBurger: BurgerComponent | undefined;
+  setActiveBurger: (args0: IconComponent | undefined) => void;
+  activeBurger: IconComponent | undefined;
 };
 
 const example = (name: string) => `

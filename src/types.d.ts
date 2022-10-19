@@ -1,9 +1,9 @@
-type BurgerComponent = {
+type IconComponent = {
   name: string;
-  Burger: FC<BurgerProps>;
+  Icon: FC<IconProps>;
 };
 
-type BurgerProps = {
+type IconProps = {
   isClosed?: boolean;
   className?: string;
 };

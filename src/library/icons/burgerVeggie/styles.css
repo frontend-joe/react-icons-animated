@@ -14,13 +14,13 @@
 }
 
 .burger.burger-veggie::after {
-  top: 4px;
+  top: 3px;
 }
 
 .burger.burger-veggie.is-closed::before {
-  transform: rotate(-45deg) translate(-2px, 2px);
+  transform: rotate(-45deg) translate(-3px, 2px);
 }
 
 .burger.burger-veggie.is-closed::after {
-  transform: rotate(45deg) translate(-2px, -4px);
+  transform: rotate(45deg) translate(-2px, -3px);
 }

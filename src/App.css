@@ -42,6 +42,7 @@
 }
 
 button {
+  position: relative;
   display: grid;
   place-items: center;
   width: 40px;
@@ -49,9 +50,25 @@ button {
   padding: 0;
   border: 0;
   background: transparent;
-  /* background: red; */
   cursor: pointer;
 }
+
+/* button debug styles */
+/* always comment before pushing!!! */
+/* button {
+  background: hotpink;
+}
+
+button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+} */
 
 .docs {
   flex: 1 1 auto;

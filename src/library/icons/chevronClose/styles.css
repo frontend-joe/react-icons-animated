@@ -1,0 +1,42 @@
+.chevron-close {
+  position: relative;
+  width: 32px;
+}
+
+.chevron-close,
+.chevron-close::before,
+.chevron-close::after {
+  display: block;
+}
+
+.chevron-close::before,
+.chevron-close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 2px;
+  height: 2px;
+  width: 14px;
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+.chevron-close::before {
+  rotate: 45deg;
+  left: 4.5px;
+}
+
+.chevron-close::after {
+  rotate: -45deg;
+  right: 4.5px;
+}
+
+.chevron-close.is-closed::before {
+  width: 100%;
+  translate: -4px 0;
+}
+
+.chevron-close.is-closed::after {
+  width: 100%;
+  translate: 4px 0;
+}

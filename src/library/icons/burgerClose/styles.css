@@ -1,7 +1,4 @@
-.burger.burger-close {
-  transition: none;
-}
-
+.burger.burger-close,
 .burger.burger-close::before,
 .burger.burger-close::after {
   transition-timing-function: linear;
@@ -9,7 +6,7 @@
 }
 
 .burger.burger-close.is-closed {
-  height: 0;
+  background: transparent;
 }
 
 .burger.burger-close.is-closed::before {

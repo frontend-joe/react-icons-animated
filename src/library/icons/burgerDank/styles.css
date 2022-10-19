@@ -7,7 +7,7 @@
 
 .burger.burger-dank::before,
 .burger.burger-dank::after {
-  width: 15px;
+  width: 16px;
 }
 
 .burger.burger-dank::before {
@@ -16,7 +16,7 @@
 }
 
 .burger.burger-dank::after {
-  left: 15px;
+  left: 16px;
   transform-origin: 0% 100%;
 }
 
@@ -25,10 +25,10 @@
 }
 
 .burger.burger-dank.is-closed::before {
-  transform: rotate(90deg) translate(10px, -2px);
+  transform: rotate(90deg) translate(10px, -1px);
 }
 
 .burger.burger-dank.is-closed::after {
-  transform: rotate(90deg) translate(-9px, 0px);
+  transform: rotate(90deg) translate(-9px, 1px);
   width: 16px;
 }
