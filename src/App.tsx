@@ -7,7 +7,6 @@ import {
   BurgerDank,
   BurgerBoughie,
   BurgerSpin,
-  BurgerFade,
   ChevronClose,
 } from "./library";
 import "./App.css";
